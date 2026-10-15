@@ -1,0 +1,15 @@
+[
+  {"id":"api","kind":"constraint","actor":"user","text":"Preserve the public API and legacy zero-retry behavior.","source":"Synthetic user request"},
+  {"id":"deploy","kind":"constraint","actor":"user","text":"Deploy only after explicit user approval.","source":"Synthetic user request"},
+  {"id":"runner-a","kind":"decision","text":"Use Jest.","source":"Initial assumption"},
+  {"id":"runner-b","kind":"decision","text":"Use Mocha.","supersedes":["runner-a"],"source":"Earlier correction"},
+  {"id":"runner-c","kind":"decision","actor":"user","text":"Use Vitest, as required by the repository.","supersedes":["runner-b"],"source":"Synthetic user correction"},
+  {"id":"read","kind":"action","status":"observed","text":"Read src/core.py; left it unchanged."},
+  {"id":"attempt","kind":"action","status":"attempted","text":"Tried a timeout adjustment in src/retry.py."},
+  {"id":"failed-check","kind":"check","status":"failed","text":"Targeted check exited 1: expected 50 ms, got 500 ms.","depends_on":["attempt"]},
+  {"id":"revert","kind":"action","status":"reverted","text":"Restored the original src/retry.py after the unsuccessful experiment.","depends_on":["attempt"]},
+  {"id":"change","kind":"action","status":"observed","text":"Changed src/backoff.py to address the timing path; correctness still needs confirmation."},
+  {"id":"running","kind":"check","status":"running","text":"Regression command is still running; process token p7 has no final result.","depends_on":["change"]},
+  {"id":"gap","kind":"coverage","status":"failed","text":"Git capture failed with permission denied. Final diff is unavailable."},
+  {"id":"next","kind":"next","text":"Collect p7 completion, restore diff visibility, and verify API and zero-retry behavior before reporting completion.","depends_on":["runner-c","api","change"]}
+]

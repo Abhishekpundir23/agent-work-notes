@@ -1,0 +1,39 @@
+{
+  "scope": "Synthetic local storage/render timing only; excludes host/model/token overhead and task success.",
+  "python": "3.12.13",
+  "platform": "Darwin arm64",
+  "runs": [
+    {
+      "events": 5002,
+      "append_seconds": 0.08936883299975307,
+      "brief_seconds": 0.020101833000808256,
+      "render_seconds": 0.0461121659973287,
+      "brief_bytes": 5965,
+      "map_bytes": 1944296,
+      "database_bytes": 2875392
+    },
+    {
+      "events": 5002,
+      "append_seconds": 0.0868104580004001,
+      "brief_seconds": 0.02012066699899151,
+      "render_seconds": 0.04282170900114579,
+      "brief_bytes": 5965,
+      "map_bytes": 1944296,
+      "database_bytes": 2875392
+    },
+    {
+      "events": 5002,
+      "append_seconds": 0.08510675000070478,
+      "brief_seconds": 0.01931495800090488,
+      "render_seconds": 0.04366195799957495,
+      "brief_bytes": 5965,
+      "map_bytes": 1944296,
+      "database_bytes": 2875392
+    }
+  ],
+  "median_seconds": {
+    "append_seconds": 0.0868104580004001,
+    "brief_seconds": 0.020101833000808256,
+    "render_seconds": 0.04366195799957495
+  }
+}

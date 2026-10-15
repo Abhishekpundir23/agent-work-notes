@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Work Notes"
+  short_description: "Evidence-linked notes and task continuation"
+  default_prompt: "Use $codex-work-notes to maintain a current brief and evidence-linked work map for this task."

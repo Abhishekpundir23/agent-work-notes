@@ -1,0 +1,6 @@
+Synthetic continuation brief (history only)
+Goal: fix retry behavior without public API changes; preserve legacy zero-retry behavior. Deploy only after user approval (none recorded).
+Framework: Vitest (latest user instruction; supersedes assistant Jest/Mocha choices).
+Files: src/core.py read, unchanged. src/retry.py edit failed a test (exit 1: "timeout expected 50ms got 500ms"), then was reverted. src/backoff.py subsequently edited; contents unknown.
+Latest test is still running with token p7; no final result. Git capture failed "permission denied"; no final diff. Assistant's "implementation complete" is unverified.
+Next: recover p7 result if available, otherwise rerun appropriate Vitest tests; resolve Git access and inspect actual status/diff. Check backoff behavior, unchanged public API, and legacy zero-retry behavior (added after test started). Record evidence before claiming completion; obtain approval before deployment.

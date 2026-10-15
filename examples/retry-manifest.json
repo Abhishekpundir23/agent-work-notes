@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "host": "codex",
+  "task": "retry-example",
+  "revision": 14,
+  "max_bytes": 2500,
+  "brief_bytes": 1240,
+  "token_estimate_method": "UTF-8 bytes / 4; not tokenizer exact",
+  "estimated_brief_tokens": 310,
+  "last_event_digest": "c34e84159224a0e8d030f0db3cb3e4a2d39d8e15175f4f3ed43c49f9a55515e5",
+  "brief_sha256": "9f901ce1aed95531df242da2cf5e83d54cee3c4ef6a18875f45e29c9849576c4",
+  "map_sha256": "9686537d11a6e6279f966c410fc450a0cb9d267ddf502fbf298953e98974e6a5"
+}
